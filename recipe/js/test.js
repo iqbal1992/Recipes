@@ -15,7 +15,7 @@ $(document).ready(function (){
           });
           newVariable=checkedValue.join(", ");
           $.ajax({
-            url:"https://api.spoonacular.com/recipes/findByIngredients?ingredients="+newVariable+"&apiKey=107bac205003452fa30477e74b30fa68",
+            url:"https://api.spoonacular.com/recipes/findByIngredients?ingredients="+newVariable+"&apiKey=your_api_key",
             type: "GET" ,
             success: function(result) {
                 console.log(result.length);
@@ -43,7 +43,7 @@ $(document).ready(function (){
                   if (ID!= null) {
                   $.ajax({
                   async: false,
-                  url:"https://api.spoonacular.com/recipes/"+ID+"/information?includeNutrition=true&apiKey=107bac205003452fa30477e74b30fa68",
+                  url:"https://api.spoonacular.com/recipes/"+ID+"/information?includeNutrition=true&apiKey=your_api_key",
                   type: "GET" ,
                   success: function(result)
                   {
@@ -60,7 +60,7 @@ $(document).ready(function (){
                   //===================
                   $.ajax({
                   async: false,
-                  url:"https://api.spoonacular.com/recipes/"+ID+"/nutritionWidget.json?apiKey=107bac205003452fa30477e74b30fa68",
+                  url:"https://api.spoonacular.com/recipes/"+ID+"/nutritionWidget.json?apiKey=your_api_key",
                   type: "GET" ,
                   success: function(result)
                   {
